@@ -8,5 +8,5 @@ class DriverModel(models.Model):
     name =  fields.Text(string="Name", required=True)
     email = fields.Text(string="Email", required=True)
     gender = fields.Selection([('male', 'Male'),('female', 'Female')], string="Gender", required=True)
-    id_number = fields.Integer(string="Id Number", required=True)
+    id_number = fields.Text(string="Id Number", required=True)
     phone_number = fields.Text(string="Phone Number", required=True)

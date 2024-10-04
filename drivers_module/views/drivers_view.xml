@@ -6,20 +6,22 @@
             <field name="model">driver.model</field>
             <field name="arch" type="xml">
                 <form string="Basic Driver Form">
-                    
                     <sheet>
                         <group>
-                            <field name="name"/>
-                            <field name="email"/>
-                            <field name="gender"/>
-                            <field name="id_number"/>
-                            <field name="phone_number"/>
+                            <group>
+                                <field name="name"/>
+                                <field name="email"/>
+                                <field name="gender"/>
+                            </group>
+                            <group>
+                                <field name="id_number"/>
+                                <field name="phone_number"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
-
 
         <record id="view_driver_tree" model="ir.ui.view">
             <field name="name">driver.tree</field>
@@ -41,7 +43,4 @@
         </record>
 
     </data>
-    
-    
-
 </odoo>

@@ -3,7 +3,7 @@
 
     <menuitem
         id="trips_root_menu"
-        name="Trips"
+        name="Drivers"
     />
     
     <menuitem
@@ -14,7 +14,7 @@
 
     <menuitem
         id="drivers_menu"
-        name="Drivers"
+        name="Add Drivers"
         parent="trips_root_menu"
         action="action_driver"
     />
