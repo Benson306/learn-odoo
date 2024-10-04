@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="trips_root_menu"
+        name="Trips"
+    />
+    
+    <menuitem
+        id="add_trip_menu"
+        name="Add Trip"
+        parent="trips_root_menu"
+    />
+
+    <menuitem
+        id="drivers_menu"
+        name="Drivers"
+        parent="trips_root_menu"
+        action="action_driver"
+    />
+
+</odoo>

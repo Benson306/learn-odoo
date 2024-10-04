@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_driver_form" model="ir.ui.view">
+            <field name="name">driver.form</field>
+            <field name="model">driver.model</field>
+            <field name="arch" type="xml">
+                <form string="Basic Driver Form">
+                    
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="gender"/>
+                            <field name="id_number"/>
+                            <field name="phone_number"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_driver_tree" model="ir.ui.view">
+            <field name="name">driver.tree</field>
+            <field name="model">driver.model</field>
+            <field name="arch" type="xml">
+                <tree string="Driver List">
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="gender"/>
+                    <field name="phone_number"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_driver" model="ir.actions.act_window">
+            <field name="name">Drivers</field>
+            <field name="res_model">driver.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+    
+    
+
+</odoo>
