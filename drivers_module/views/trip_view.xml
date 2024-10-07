@@ -9,7 +9,8 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="driver_id"/>
+                                <field name="reference" readonly="True" />
+                                <field name="driver_id" />
                                 <field name="vehicle_id"/>
                                 <field name="sales_order"/>
                             </group>
@@ -29,6 +30,7 @@
             <field name="model">trip.model</field>
             <field name="arch" type="xml">
                 <tree string="Trip List">
+                    <field name="reference"/>
                     <field name="driver_id"/>
                     <field name="vehicle_id"/>
                     <field name="sales_order"/>

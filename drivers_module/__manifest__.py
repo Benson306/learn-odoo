@@ -4,6 +4,7 @@
     "author":"Navi Dev Team",
     "data": [
         'security/ir.model.access.csv',
+        "data/sequence.xml",
         "views/driver_view.xml",
         "views/vehicle_view.xml",
         "views/trip_view.xml",

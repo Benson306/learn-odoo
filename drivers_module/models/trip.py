@@ -6,6 +6,7 @@ class TripModel(models.Model):
     _description = "Trip data structure"
     _rec_name = "sales_order"
 
+    reference = fields.Char(String="Reference", default="New")
     driver_id = fields.Many2one('driver.model', string = "Driver")
     vehicle_id = fields.Many2one('vehicle.model', string = "Vehicle")
     sales_order =  fields.Text(string="Sales Order", required=True)
@@ -15,3 +16,11 @@ class TripModel(models.Model):
     departure_time = fields.Datetime(string="Departure Time")
     arrival_time = fields.Datetime(string="Arrival Time")
     status = fields.Text(string="Trip Status", default="Active")
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if not vals.get('reference') or vals['reference'] == 'New':
+                vals['reference'] = self.env['ir.sequence'].next_by_code('trip.model')
+
+        return super().create(vals_list)
