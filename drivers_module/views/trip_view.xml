@@ -6,6 +6,9 @@
             <field name="model">trip.model</field>
             <field name="arch" type="xml">
                 <form string="Basic Trip Form">
+                    <header>
+                        <field name="state" widget="statusbar" options="{'clickable':'1'}" />
+                    </header>
                     <sheet>
                         <group>
                             <group>

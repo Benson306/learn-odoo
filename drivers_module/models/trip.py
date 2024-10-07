@@ -16,6 +16,7 @@ class TripModel(models.Model):
     departure_time = fields.Datetime(string="Departure Time")
     arrival_time = fields.Datetime(string="Arrival Time")
     status = fields.Text(string="Trip Status", default="Active")
+    state = fields.Selection([('active','Active'), ('paused','Paused'), ('paused','Paused'), ('completed', 'Completed')], default="active")
 
     @api.model_create_multi
     def create(self, vals_list):
