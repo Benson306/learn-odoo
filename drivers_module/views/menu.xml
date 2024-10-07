@@ -3,20 +3,28 @@
 
     <menuitem
         id="trips_root_menu"
-        name="Drivers"
+        name="Trip Management"
     />
     
     <menuitem
-        id="add_trip_menu"
-        name="Add Trip"
+        id="trips_menu"
+        name="Trips"
         parent="trips_root_menu"
+        action="action_trip"
     />
 
     <menuitem
         id="drivers_menu"
-        name="Add Drivers"
+        name="Drivers"
         parent="trips_root_menu"
         action="action_driver"
+    />
+
+    <menuitem
+        id="vehicles_menu"
+        name="Vehicles"
+        parent="trips_root_menu"
+        action="action_vehicle"
     />
 
 </odoo>
